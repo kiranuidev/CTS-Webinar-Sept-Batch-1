@@ -1,0 +1,28 @@
+<div ng-controller="cartCtrl">
+
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th><a href="" ng-click="sortByYear()">Year</a></th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Contact</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="vehicle in cartVehicles">
+                <td>{{$index+1}}</td>
+                <td>{{vehicle.Year}}</td>
+                <td>{{vehicle.Make|uppercase}}</td>
+                <td>{{vehicle.Model|lowercase}}</td>
+                <td>{{vehicle.Contact|phoneformat:countryCode:ISDCode}}</td>
+            </tr>
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>

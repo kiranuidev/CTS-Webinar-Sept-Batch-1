@@ -14,13 +14,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active" ng-click="loadViews('home')"><a href="#">Home</a></li>
-                <li ng-click="loadViews('vehicles')"><a href="#">Vehicles</a></li>
-            </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-                <li ng-click="loadViews('register')"><a href="#">Register</a></li>
-                <li ng-click="loadViews('login')"><a href="#">Login</a></li>
+                <li ng-repeat="item in navItems" class="" ng-click="loadViews(item.path)"><a href="#">{{item.displayName}}</a></li>
 
             </ul>
         </div>
