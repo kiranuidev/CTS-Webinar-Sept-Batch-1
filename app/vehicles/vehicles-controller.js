@@ -3,7 +3,14 @@ angular.module("vehicles")
                                  function ($scope, vehicleSvc, cartSvc) {
             $scope.vehicleCount = 5;
             $scope.orderByYear = "Year";
-            $scope.vehicles = vehicleSvc.getVehicleList();
+           // $scope.vehicles = vehicleSvc.getVehicleList();
+           vehicleSvc.getVehicleList()
+           .then(function(response){
+               $scope.vehicles=response.data.vehicles;
+           })
+           .catch(function(response){
+               $scope.showAlert=true; 
+           });
 
             $scope.showMoreVehicles = function () {
                 $scope.vehicleCount += 5;
