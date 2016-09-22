@@ -1,6 +1,27 @@
 angular.module("vehicles")
-    .service("vehicleSvc", [ "$http",function ($http) {
+    .service("vehicleSvc", [ "$http","$q",function ($http,$q) {
+        var res;
+       
         this.getVehicleList = function () {
-            return $http.get("app/api/vehicles.json");
+            //Step 1 create the deferred Object
+            var dfd= $q.defer();
+            
+            if(res){
+             dfd.resolve(res);   
+            }
+            else{
+             $http.get("app/api/vehicles.json")
+               .then(function(response){
+                res=response;
+               dfd.resolve(res)
+               
+           }).catch(function(response){
+               dfd.reject(response);
+           });
+            }
+            
+            return dfd.promise;
+            
+          /*  return $http.get("app/api/vehicles.json");*/
         };
 }]);

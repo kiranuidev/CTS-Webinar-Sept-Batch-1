@@ -4,6 +4,7 @@
                     "Make": "Toyota",
                     "Model": "A5",
                     "Year": 2014,
+                    "Price":200000,
                     "Contact": 1774601705
   },
                 {
@@ -11,6 +12,7 @@
                     "Make": "Ford",
                     "Model": "Baleno",
                     "Year": 2008,
+                   "Price":200000,
                     "Contact": 1850591773
   },
                 {
@@ -18,6 +20,7 @@
                     "Make": "BMW",
                     "Model": "Baleno",
                     "Year": 2011,
+                    "Price":900000,
                     "Contact": 1228648633
   },
                 {
@@ -25,6 +28,7 @@
                     "Make": "Yamaha",
                     "Model": "POLO",
                     "Year": 2010,
+                    "Price":700000,
                     "Contact": 1000282163
   },
                 {
@@ -32,6 +36,7 @@
                     "Make": "Toyota",
                     "Model": "POLO",
                     "Year": 2006,
+                    "Price":800000,
                     "Contact": 1617172274
   },
                 {
@@ -39,6 +44,7 @@
                     "Make": "Suzuki",
                     "Model": "Fortuner",
                     "Year": 2009,
+                    "Price":900000,
                     "Contact": 1073700962
   },
                 {
@@ -46,6 +52,7 @@
                     "Make": "Ford",
                     "Model": "POLO",
                     "Year": 2002,
+                    "Price":900000,
                     "Contact": 1640058372
   },
                 {
@@ -53,6 +60,7 @@
                     "Make": "BMW",
                     "Model": "C2000",
                     "Year": 2010,
+                    "Price":900000,
                     "Contact": 1445499959
   },
                 {
@@ -60,6 +68,7 @@
                     "Make": "Jaguar",
                     "Model": "Vento",
                     "Year": 2008,
+                    "Price":900000,
                     "Contact": 1547250544
   },
                 {
@@ -67,6 +76,7 @@
                     "Make": "Yamaha",
                     "Model": "Fortuner",
                     "Year": 2012,
+                    "Price":900000,
                     "Contact": 1392773960
   },
                 {
@@ -74,6 +84,7 @@
                     "Make": "VolksWagon",
                     "Model": "Endeavor",
                     "Year": 2003,
+                    "Price":900000,
                     "Contact": 1164984922
   },
                 {
@@ -81,6 +92,7 @@
                     "Make": "Audi",
                     "Model": "Fortuner",
                     "Year": 2009,
+                    "Price":900000,
                     "Contact": 1197362338
   },
                 {
@@ -88,6 +100,7 @@
                     "Make": "BMW",
                     "Model": "Fortuner",
                     "Year": 2016,
+                    "Price":900000,
                     "Contact": 1772691747
   },
                 {
@@ -95,6 +108,7 @@
                     "Make": "Jaguar",
                     "Model": "Vento",
                     "Year": 2006,
+                    "Price":900000,
                     "Contact": 1175916016
   },
                 {
@@ -102,6 +116,7 @@
                     "Make": "VolksWagon",
                     "Model": "A5",
                     "Year": 2003,
+                    "Price":900000,
                     "Contact": 1420815141
   },
                 {
@@ -109,6 +124,7 @@
                     "Make": "VolksWagon",
                     "Model": "c4000",
                     "Year": 2017,
+                    "Price":900000,
                     "Contact": 1626548062
   },
                 {
@@ -116,6 +132,7 @@
                     "Make": "Jaguar",
                     "Model": "C2000",
                     "Year": 2016,
+                    "Price":900000,
                     "Contact": 1250230979
   },
                 {
@@ -123,6 +140,7 @@
                     "Make": "Suzuki",
                     "Model": "Vento",
                     "Year": 2007,
+                    "Price":900000,
                     "Contact": 1195161783
   },
                 {
@@ -130,6 +148,7 @@
                     "Make": "VolksWagon",
                     "Model": "FZ",
                     "Year": 2005,
+                    "Price":900000,
                     "Contact": 1283390658
   },
                 {
@@ -137,6 +156,7 @@
                     "Make": "Audi",
                     "Model": "Fortuner",
                     "Year": 2003,
+                    "Price":900000,
                     "Contact": 1027808158
   },
                 {
@@ -144,6 +164,7 @@
                     "Make": "Jaguar",
                     "Model": "Fortuner",
                     "Year": 2010,
+                    "Price":900000,
                     "Contact": 1064031178
   },
                 {
@@ -151,6 +172,7 @@
                     "Make": "Jaguar",
                     "Model": "Baleno",
                     "Year": 2016,
+                    "Price":900000,
                     "Contact": 1573483394
   }
 ]

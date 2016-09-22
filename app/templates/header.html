@@ -15,7 +15,8 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li ng-repeat="item in navItems" class="" ng-click="loadViews(item.path)"><a href="#">{{item.displayName}}</a></li>
-
+                <li><a href="#">Basket <label class="badge">{{cartCount}}</label></a></li>
+                <li><a href="#">Total <label class="badge">{{totalCost}}</label></a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
