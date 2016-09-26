@@ -1,12 +1,15 @@
 //Controller Syntax
 //                                   name          dependencies
-angular.module("header").controller("headerCtrl", ["$scope","$rootScope" ,function ($scope,$rootScope) {
-    $scope.heading = "Dealers App";
+angular.module("header").controller("headerCtrl", ["$scope","$rootScope" ,"$translate",function ($scope,$rootScope,$translate) {
+   
     var path = "app/templates/";
     $scope.template = path + "login.html";
     $scope.cartCount=0;
     $scope.totalCost=0;
 
+    $scope.changeLanguage=function(name){
+        $translate.use(name);
+    }
     $scope.navItems = [{
             "displayName": "Home",
             "path": "home"

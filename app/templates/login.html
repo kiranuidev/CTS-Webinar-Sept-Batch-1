@@ -4,7 +4,10 @@
   <div class="form-group">
             <label for="inputEmail" class="control-label col-xs-2">User Name</label>
             <div class="col-xs-4">
-                <input type="text" class="form-control" placeholder="User Name" name="phoneNumber" ng-model="loginVM.userDetails.username">
+                <input type="text"
+                       class="form-control" placeholder="User Name" name="phoneNumber"
+                       cts-alphabets-only
+                       ng-model="loginVM.userDetails.username">
                
             </div>
         </div>

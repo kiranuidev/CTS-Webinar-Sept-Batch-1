@@ -1,8 +1,8 @@
 angular.module("register")
-.controller("registerCtrl",["lookupSvc","$scope",function(lookupSvc,$scope){
+.controller("registerCtrl",["lookupFact","$scope",function(lookupFact,$scope){
     var vm=this;
     //vm.countries=lookupSvc.getCountries();
-    lookupSvc.getCountries()
+    lookupFact.getCountries()
     .then(function(response){
        vm.countries=response.data.countries;
     })

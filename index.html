@@ -11,19 +11,40 @@
 <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>    
 
         <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
 
 
 </head>
 
 <body>
-    <div class="container" ng-controller="headerCtrl">
+    <div class="container-fluid" ng-controller="headerCtrl">
         <div ng-include="'app/templates/header.html'"></div>
         <div ng-include="template"></div>
+        
+        <!--<h1>Element:
+            <cts-company-name></cts-company-name>
+        </h1>
+        Attribute:
+        <h1 cts-company-name></h1>
+        Class:
+        <div class="cts-company-name"></div>
+        
+        Comment: directive: cts-company-name 
+        <div cts-login-page></div>-->
+        
     </div>
     <!--filters-->
     <script src="app/filters/ctsFilters.js"></script>
     <script src="app/filters/ctsFilters-phoneformat.js"></script>
 
+    <!--Components-->
+    <script src="app/components/components.js"></script>
+    <script src="app/components/components-companyName.js"></script>
+    <script src="app/components/components-login.js"></script>
+     <script src="app/components/components-alphabetsOnly.js"></script>
+    
+    <!--EOC-->
+    
     <!--vehicles-->
     <script src="app/vehicles/vehicles.js"></script>
     <script src="app/vehicles/vehicles-controller.js"></script>
@@ -42,9 +63,9 @@
     <script src="app/register/register-controller.js"></script>
 <script src="app/lookup/lookup.js"></script>
     <script src="app/lookup/lookup-service.js"></script>
+    <script src="app/lookup/lookup-factory.js"></script>
     <script src="app/main/main.js"></script>
     <script src="app/main/main-apiservice.js"></script>
-
 
     <script src="app/app.js"></script>
 </body>
