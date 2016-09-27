@@ -8,17 +8,26 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Vehicle Dealers</a>
+            <a class="navbar-brand" href="#"><span cts-company-name></span></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li ng-repeat="item in navItems" class="" ng-click="loadViews(item.path)"><a href="#">{{item.displayName}}</a></li>
-                <li><a href="#">Basket <label class="badge">{{cartCount}}</label></a></li>
+                <li ng-repeat="item in navItems" class="" ng-click="loadViews(item.path)"><a href="#">{{item.displayName|translate}}</a></li>
+                <li><a href="#">{{'Basket'|translate}} <label class="badge">{{cartCount}}</label></a></li>
                 <li><a href="#">Total <label class="badge">{{totalCost}}</label></a></li>
+                  <li ng-click="changeLanguage('en')"><a href="#">English</a></li>
+                <li  ng-click="changeLanguage('de')"><a href="#">Deutsche</a></li>
             </ul>
         </div>
+ 
+        <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">English</a></li>
+                <li><a href="#">Deutsche</a></li>
+            </ul>
+        </div>-->
         <!-- /.navbar-collapse -->
     </div>
     <!-- /.container-fluid -->

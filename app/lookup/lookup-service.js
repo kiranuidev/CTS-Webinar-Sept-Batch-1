@@ -1,14 +1,13 @@
 angular.module("lookup")
-    .service("lookupSvc", ["apiService", "$q", function (apiService, $q) {
+    .service("lookupSvc", ["apiService", "$q", function(apiService, $q) {
         var countries;
-        this.getCountries = function () {
+        this.getCountries = function() {
             var dfd = $q.defer();
 
-
             apiService.apiGet("countries.json")
-                .then(function (response) {
+                .then(function(response) {
                     dfd.resolve(response);
-                }).catch(function (response) {
+                }).catch(function(response) {
                     dfd.reject(response);
                 });
 
@@ -16,4 +15,4 @@ angular.module("lookup")
             return dfd.promise;
             /*return $http.get("app/api/countries.json");*/
         };
-}])
+    }])
