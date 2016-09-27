@@ -1,11 +1,16 @@
 angular.module("login")
-.controller("loginCtrl",[function(){
-    var vm = this;
-    var myData="kiran";
-    vm.userDetails={
-        
-    };
-    vm.login=function(){
-      console.log(vm.userDetails);  
-    };
+    .controller("loginCtrl", ["$scope", function ($scope) {
+        var vm = this;
+        var myData = "kiran";
+        $scope.userName = "xxx";
+        vm.userDetails = {
+
+        };
+        vm.login = function () {
+            console.log(vm.userDetails);
+        };
+        $scope.$watch("userName", function (newVal, oldVal) {
+            console.log(newVal);
+            console.log(oldVal);
+        });
 }]);
