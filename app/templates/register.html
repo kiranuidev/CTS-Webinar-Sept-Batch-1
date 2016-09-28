@@ -1,23 +1,17 @@
-<form name="registerForm" ng-controller="registerCtrl as vm" novalidate >
+<form name="registerForm" ng-controller="registerCtrl as vm" novalidate>
     <div class="form-horizontal">
         <div class="form-group">
             <label for="inputEmail" class="control-label col-xs-2">First Name</label>
 
             <div class="col-xs-4">
-                <input type="text" class="form-control" placeholder="First Name" name="firstName" 
-                ng-model="vm.user.firstName" 
-                ng-required="true"
-                         cts-alphabets-only
-              ng-pattern="/^[a-zA-Z\s]+$/"
-                       
-                       ng-model-options="{ updateOn: 'blur' }">
+                <input type="text" class="form-control" placeholder="First Name" name="firstName" ng-model="vm.user.firstName" ng-required="true" cts-alphabets-only ng-pattern="/^[a-zA-Z\s]+$/" ng-model-options="{ updateOn: 'blur' }">
                 <div ng-show="registerForm.firstName.$dirty">
- <p ng-show="registerForm.firstName.$error.required">
-     First Name Required
-                </p>
-                <p ng-show="registerForm.firstName.$error.pattern">
-   Alphabets only allowed
-                </p>
+                    <p ng-show="registerForm.firstName.$error.required">
+                        First Name Required
+                    </p>
+                    <p ng-show="registerForm.firstName.$error.pattern">
+                        Alphabets only allowed
+                    </p>
                 </div>
 
             </div>
@@ -25,34 +19,31 @@
         <div class="form-group">
             <label for="inputEmail" class="control-label col-xs-2">Last Name</label>
             <div class="col-xs-4">
-                <input type="text" name="lastName" class="form-control"
-                         ng-model="vm.user.lastName" ng-minlength="3" 
-                       ng-maxlength="10">
+                <input type="text" name="lastName" class="form-control" ng-model="vm.user.lastName" ng-minlength="3" ng-maxlength="10">
                 <p ng-show="registerForm.lastName.$error.minlength">
                     Last Name must be 3 characters length</p>
-                 <p ng-show="registerForm.lastName.$error.maxlength">
+                <p ng-show="registerForm.lastName.$error.maxlength">
                     Last Name is too long.</p>
             </div>
         </div>
         <div class="form-group">
             <label for="inputEmail" class="control-label col-xs-2">User Name</label>
             <div class="col-xs-4">
-                <input type="text" name="userName" class="form-control" placeholder="User Name"
-                         ng-model="vm.user.userName"  >
-                
+                <input type="text" name="userName" class="form-control" placeholder="User Name" ng-model="vm.user.userName">
+
             </div>
         </div>
         <div class="form-group">
             <label for="inputEmail" class="control-label col-xs-2">Date Of Birth</label>
             <div class="col-xs-4">
-                 <p class="input-group">
-          <input type="text"
-                 class="form-control" uib-datepicker-popup="{{format}}" ng-model="vm.user.dob" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
-                     
-          <span class="input-group-btn">
+                <p class="input-group">
+                    <!--  <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="vm.user.dob" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />-->
+                    <input type="text" class="form-control" ng-model="vm.user.dob" cts-date-picker>{{vm.user.dob}}
+
+                    <span class="input-group-btn">
             <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
           </span>
-        </p>
+                </p>
             </div>
         </div>
         <!--<div class="form-group">
@@ -76,12 +67,13 @@
                     <option value="">Please Select</option>
                 </select>
                 
-            </div>--><div class="col-xs-4">
-              <input type="text" ng-model="vm.selected" uib-typeahead="country.name for country in vm.countries | filter:$viewValue | limitTo:8" class="form-control">
+            </div>-->
+            <div class="col-xs-4">
+                <input type="text" ng-model="vm.selected" uib-typeahead="country.name for country in vm.countries | filter:$viewValue | limitTo:8" class="form-control">
             </div>
         </div>
 
- 
+
         <div class="form-group">
             <label for="inputEmail" class="control-label col-xs-2">State</label>
             <div class="col-xs-4">
@@ -94,39 +86,34 @@
         <div class="form-group">
             <label for="inputEmail" class="control-label col-xs-2">Phone Number</label>
             <div class="col-xs-4">
-                <input type="text" class="form-control" placeholder="Phone Number"
-                         ng-model="vm.user.phoneNumber"  >
-               
+                <input type="text" class="form-control" placeholder="Phone Number" cts-numbers-only ng-model="vm.user.phoneNumber">
+
             </div>
         </div>
 
         <div class="form-group">
             <label for="inputPassword" class="control-label col-xs-2">Gender</label>
             <div class="col-xs-4">
-                <input type="radio" value="M"  name="gender" ng-model="vm.user.gender">M
+                <input type="radio" value="M" name="gender" ng-model="vm.user.gender">M
                 <input type="radio" value="F" name="gender" ng-model="vm.user.gender">F
                 <input type="radio" value="NA" name="gender" ng-model="vm.user.gender">Don't Reveal
             </div>
         </div>
-      
-        
+
+
         <div class="form-group">
             <div class="col-xs-offset-2 col-xs-4">
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" 
-                               
-                           ng-model="vm.user.agreeTerms"    > I Agree Terms</label>
+                        <input type="checkbox" ng-model="vm.user.agreeTerms"> I Agree Terms</label>
                 </div>
             </div>
         </div>
-        
-        
+
+
         <div class=" form-group ">
             <div class="col-xs-offset-2 col-xs-4 ">
-                <button type="button" class="btn btn-primary"
-                        
-                        ng-disabled="!vm.user.agreeTerms">Register</button>
+                <button type="button" class="btn btn-primary" ng-disabled="!vm.user.agreeTerms">Register</button>
             </div>
         </div>
     </div>
