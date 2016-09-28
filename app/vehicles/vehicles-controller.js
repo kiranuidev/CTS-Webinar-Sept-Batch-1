@@ -1,5 +1,5 @@
 angular.module("vehicles")
-    .controller("vehiclesCtrl", ["$scope", "vehicleSvc", "cartSvc","$rootScope",function($scope, vehicleSvc, cartSvc,                      $rootScope) {
+    .controller("vehiclesCtrl", ["$scope", "vehicleSvc", "cartSvc","$rootScope","$state",function($scope, vehicleSvc, cartSvc,                      $rootScope,$state) {
             $scope.vehicleCount = 5;
             $scope.orderByYear = "Year";
            // $scope.vehicles = vehicleSvc.getVehicleList();
@@ -23,4 +23,8 @@ angular.module("vehicles")
         $rootScope.$broadcast("AddedVehicle",{cost:vehicle.Price});
                 cartSvc.addVehicleToCart(vehicle);
             };
+       $scope.GoToCheckOut=function(){
+           
+         $state.go("index.cart")  
+       };
  }]);

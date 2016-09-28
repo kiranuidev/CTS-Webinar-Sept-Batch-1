@@ -1,4 +1,4 @@
-<div ng-controller="vehiclesCtrl">
+<div>
     <div class="row">
         <div class="col-md-2">
             <input type="text" placeholder="Search By Make" class="form-control" ng-model="searchModel">
@@ -11,6 +11,9 @@
         </div>
         <div class="col-md-2">
             <button ng-click="showMoreVehicles()" class="btn btn-primary">Show More Vehicles</button>
+        </div>
+                <div class="col-md-2">
+            <button ng-click="GoToCheckOut()" class="btn btn-primary">Checkout</button>
         </div>
     </div>
 
@@ -38,7 +41,7 @@
                 </td>
             </tr>
 
-            </tr>
+      
 
         </tbody>
     </table>

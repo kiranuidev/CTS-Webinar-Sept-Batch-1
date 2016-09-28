@@ -4,7 +4,7 @@ angular.module("lookup")
             return {
                 getCountries: function () {
                     var dfd = $q.defer();
-                    apiService.apiGet("app/api/countries.json")
+                    apiService.apiGet("countries.json")
                         .then(function (response) {
                             dfd.resolve(response);
                         }).catch(function (response) {

@@ -1,32 +1,76 @@
-angular.module("dealersApp", ["login", "vehicles", "register", "header", "ctsFilters",
-    "lookup",
-    "ui.bootstrap", "appValues",
-    "main", "pascalprecht.translate", "components"
+angular.module("dealersApp", ["login", "vehicles", "register", "header",
+  "ctsFilters",
+  "lookup",
+  "ui.bootstrap", "appValues",
+  "main", "pascalprecht.translate", "components", "ui.router"
 ]);
 
 
 angular.module("dealersApp")
-    .config(['$translateProvider', function($translateProvider) {
-        $translateProvider.translations('en', {
-            "Home": "Home",
-            "Vehicles": "Vehicles",
-            "Login": "Login",
-            "Register": "Register",
-            "Cart": "Cart",
-            "Basket": "Basket"
-        });
-        $translateProvider.translations('de', {
-            "Home": "Zuhause",
-            "Vehicles": "Fahrzeuge",
-            "Login": "Anmeldung",
-            "Register": "Neu registrieren",
-            "Cart": "Karte",
-            "Basket": "Korb"
-        });
-        console.log("I am the main app");
-    }]);
+    .config(['$translateProvider', "$stateProvider",
+    function ($translateProvider,
+            $stateProvider) {
+
+            var homeObj = {
+                templateUrl: "app/templates/home.html"
+            };
+            var vehicleObj = {
+                templateUrl: "app/templates/vehicles.html",
+                controller:"vehiclesCtrl"
+            };
+            var loginObj = {
+                templateUrl: "app/templates/login.html",
+                controller:"loginCtrl as loginVM"
+            };
+            var cartObj = {
+                templateUrl: "app/templates/cart.html",
+                controller:"cartCtrl"
+            };
+             var registerObj = {
+                templateUrl: "app/templates/register.html",
+                 controller:"registerCtrl as vm"
+            };
+
+
+            $stateProvider.state('index', {
+                url: "",
+                views: {
+                    "header": {
+                        templateUrl: "app/templates/header.html"
+                    },
+                    "footer": {
+                        template: "<hr>@kiran 2016"
+                    }
+                }
+            })
+
+               .state('index.home', homeObj)
+                .state('index.vehicles', vehicleObj)
+                .state('index.cart', cartObj)
+                .state('index.login', loginObj)
+                .state('index.register', registerObj);
+
+            $translateProvider.translations('en', {
+                "Home": "Home",
+                "Vehicles": "Vehicles",
+                "Login": "Login",
+                "Register": "Register",
+                "Cart": "Cart",
+                "Basket": "Basket"
+            });
+            $translateProvider.translations('de', {
+                "Home": "Zuhause",
+                "Vehicles": "Fahrzeuge",
+                "Login": "Anmeldung",
+                "Register": "Neu registrieren",
+                "Cart": "Karte",
+                "Basket": "Korb"
+            });
+            console.log("I am the main app");
+    }
+  ]);
 
 angular.module("dealersApp")
-    .run([function() {
+    .run([function () {
         console.log("I am the main app run");
-    }]);
+  }]);

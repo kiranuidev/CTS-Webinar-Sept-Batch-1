@@ -23,7 +23,7 @@ angular.module("main")
                     $timeout(function () {
                         modalInstance.close();
                         dfd.resolve(response);
-                    }, 10000);
+                    }, 2000);
 
                 }).catch(function (response) {
                     dfd.reject(response);
