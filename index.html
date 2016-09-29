@@ -1,0 +1,67 @@
+<html ng-app="dealersApp">
+
+<head>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!--Refer to jquery-->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="bower_components/underscore/underscore-min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div ui-view="header"></div>
+        <div ui-view="footer"></div>
+    </div>
+    <!--filters-->
+    <script src="app/filters/ctsFilters.js"></script>
+    <script src="app/filters/ctsFilters-phoneformat.js"></script>
+
+    <!--Components-->
+    <script src="app/components/components.js"></script>
+    <script src="app/components/components-companyName.js"></script>
+    <script src="app/components/components-login.js"></script>
+    <script src="app/components/components-alphabetsOnly.js"></script>
+    <script src="app/components/components-customClick.js"></script>
+    <script src="app/components/components-customDatePicker.js"></script>
+    <script src="app/components/components-checkUser.js"></script>
+    <script src="app/components/components-customLogo.js"></script>
+    <!--EOC-->
+
+    <!--vehicles-->
+    <script src="app/vehicles/vehicles.js"></script>
+    <script src="app/vehicles/vehicles-controller.js"></script>
+    <script src="app/vehicles/vehicles-cartcontroller.js"></script>
+    <script src="app/vehicles/vehicles-service.js"></script>
+    <script src="app/vehicles/vehicles-cartService.js"></script>
+
+    <script src="app/login/login.js"></script>
+    <script src="app/login/login-controller.js"></script>
+    <!--header-module-->
+    <script src="app/header/header.js"></script>
+    <script src="app/header/header-controller.js"></script>
+
+    <!--End of header-->
+    <script src="app/register/register.js"></script>
+    <script src="app/register/register-controller.js"></script>
+    <script src="app/lookup/lookup.js"></script>
+    <script src="app/lookup/lookup-service.js"></script>
+    <script src="app/lookup/lookup-factory.js"></script>
+    <script src="app/main/main.js"></script>
+    <script src="app/main/main-apiservice.js"></script>
+    <script src="app/appValues/appValues.js"></script>
+
+    <script src="app/app.js"></script>
+</body>
+
+</html>

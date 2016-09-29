@@ -1,0 +1,30 @@
+<!--
+<div cts-trans>
+    <h1>Login</h1>
+</div>
+-->
+<div cts-custom-logo></div>
+
+<form class="form-horizontal" name="loginForm" >
+    <div class="form-group">
+        <label for="inputEmail" class="control-label col-xs-2">User Name</label>
+        <div class="col-xs-4">
+            <input type="text" class="form-control" placeholder="User Name" name="username" ng-model="loginVM.userDetails.username" cts-check-user>
+            <p ng-show="loginForm.username.$error.usercheck">UserName does not exists. Please try..</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="inputEmail" class="control-label col-xs-2">Password</label>
+        <div class="col-xs-4">
+            <input type="password" class="form-control" placeholder="Password" name="Password" cts-alphabets-only ng-model="loginVM.userDetails.password">
+
+        </div>
+    </div>
+    <div class=" form-group ">
+        <div class="col-xs-offset-2 col-xs-4 ">
+            <button type="button" class="btn btn-primary" cts-custom-click="loginVM.login()">Login</button>
+        </div>
+    </div>
+    <input type="text" ng-model="userName">
+</form>
