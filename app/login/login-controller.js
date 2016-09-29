@@ -13,4 +13,9 @@ angular.module("login")
             console.log(newVal);
             console.log(oldVal);
         });
+        
+        setTimeout(function(){
+            $scope.userName="New User";
+            //$scope.$apply();
+        },1000)
 }]);

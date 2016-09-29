@@ -5,7 +5,7 @@
 -->
 <div cts-custom-logo></div>
 
-<form class="form-horizontal" name="loginForm" ng-controller="loginCtrl as loginVM">
+<form class="form-horizontal" name="loginForm" >
     <div class="form-group">
         <label for="inputEmail" class="control-label col-xs-2">User Name</label>
         <div class="col-xs-4">
@@ -13,7 +13,7 @@
             <p ng-show="loginForm.username.$error.usercheck">UserName does not exists. Please try..</p>
         </div>
     </div>
-    </div>
+
     <div class="form-group">
         <label for="inputEmail" class="control-label col-xs-2">Password</label>
         <div class="col-xs-4">

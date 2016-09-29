@@ -5,11 +5,22 @@ angular.module("dealersApp", ["login", "vehicles", "register", "header",
   "main", "pascalprecht.translate", "components", "ui.router"
 ]);
 
-
 angular.module("dealersApp")
-    .config(['$translateProvider', "$stateProvider",
+.provider("demo",[function(){
+    this.version ="1.0.0";
+    
+    this.$get= function(){
+        return this.version;
+    };
+}]);
+angular.module("dealersApp")
+    .config(['$translateProvider', 
+             "$stateProvider",
+             "demoProvider",
     function ($translateProvider,
-            $stateProvider) {
+            $stateProvider,
+               demoProvider) {
+             console.log(demoProvider.version);
 
             var homeObj = {
                 templateUrl: "app/templates/home.html"
@@ -36,7 +47,8 @@ angular.module("dealersApp")
                 url: "",
                 views: {
                     "header": {
-                        templateUrl: "app/templates/header.html"
+                        templateUrl: "app/templates/header.html",
+                        controller:'headerCtrl'
                     },
                     "footer": {
                         template: "<hr>@kiran 2016"
@@ -71,6 +83,9 @@ angular.module("dealersApp")
   ]);
 
 angular.module("dealersApp")
-    .run([function () {
+    .run(["demo",function (demo) {
+        
         console.log("I am the main app run");
   }]);
+
+

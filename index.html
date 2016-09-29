@@ -9,8 +9,6 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular/angular.js"></script>
-
-
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="bower_components/angular-translate/angular-translate.js"></script>
     <script src="bower_components/underscore/underscore-min.js"></script>
@@ -21,24 +19,9 @@
 </head>
 
 <body>
-    <div class="container-fluid" ng-controller="headerCtrl">
-
+    <div class="container-fluid">
         <div ui-view="header"></div>
         <div ui-view="footer"></div>
-        <!--  <div ng-include="'app/templates/header.html'"></div>
-        <div ng-include="template"></div>-->
-
-        <!--<h1>Element:
-            <cts-company-name></cts-company-name>
-        </h1>
-        Attribute:
-        <h1 cts-company-name></h1>
-        Class:
-        <div class="cts-company-name"></div>
-
-        Comment: directive: cts-company-name
-        <div cts-login-page></div>-->
-
     </div>
     <!--filters-->
     <script src="app/filters/ctsFilters.js"></script>

@@ -14,18 +14,20 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li ui-sref=".home"><a href="">Home</a></li>
-                  <li ui-sref=".vehicles"><a href="">Vehicles</a></li>
-                   <li ui-sref=".login"><a href="">Login</a></li>
-                   <li ui-sref=".register"><a href="">Register</a></li>
-               <!-- <li ng-repeat="item in navItems" class="" ng-click="loadViews(item.path)"><a href="#">{{item.displayName|translate}}</a></li>
+
+                <li ng-repeat="item in navItems" class="" ui-sref=".{{item.path}}"><a href="#">{{item.displayName|translate}}</a></li>
+                <li><a href="#">{{'Basket'|translate}} <label class="badge">{{cartCount}}</label></a></li>
+                <li><a href="#">Total <label class="badge">{{totalCost}}</label></a></li>
+                <li ng-click="changeLanguage('en')"><a href="#">English</a></li>
+                <li ng-click="changeLanguage('de')"><a href="#">Deutsche</a></li>
+                <!-- <li ng-repeat="item in navItems" class="" ui-sref=".{{item.name}}"><a href="#">{{item.displayName|translate}}</a></li>
                 <li><a href="#">{{'Basket'|translate}} <label class="badge">{{cartCount}}</label></a></li>
                 <li><a href="#">Total <label class="badge">{{totalCost}}</label></a></li>
                   <li ng-click="changeLanguage('en')"><a href="#">English</a></li>
                 <li  ng-click="changeLanguage('de')"><a href="#">Deutsche</a></li>-->
             </ul>
         </div>
- 
+
         <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">English</a></li>

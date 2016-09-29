@@ -1,7 +1,7 @@
 //Controller Syntax
 //                                   name          dependencies
 
-angular.module("header").controller("headerCtrl", ["$scope", "$rootScope", "APP_VALUES", function($scope, $rootScope, APP_VALUES) {
+angular.module("header").controller("headerCtrl", ["$scope", "$rootScope", "APP_VALUES","$translate", function($scope, $rootScope, APP_VALUES,$translate) {
     $scope.heading = APP_VALUES.appName;
     var path = APP_VALUES.baseTemplatePath;
 
@@ -34,9 +34,9 @@ angular.module("header").controller("headerCtrl", ["$scope", "$rootScope", "APP_
             "path": "cart"
         }
     ]
-    $scope.loadViews = function(viewName) {
+    /*$scope.loadViews = function(viewName) {
         $scope.template = path + viewName + ".html";
-    };
+    };*/
     $rootScope.$on("AddedVehicle", function(evt, args) {
         $scope.totalCost += args.cost;
         $scope.cartCount++;
